@@ -1,1 +1,1 @@
-# Apuntes-programaci-n-funcional-lambda-y-operador-ternario
+# APUNTES DE PROGRAMACIÓN
