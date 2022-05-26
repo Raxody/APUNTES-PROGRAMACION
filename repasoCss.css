@@ -1,0 +1,157 @@
+/*Un estilo aplicado a nivel de un elemento html sobreescribe un elemento definido de un
+archivo*/
+
+/*El orden de propiedades desde capa externa a interna es margin, border, padding-->
+
+    /* Para agregar un margen a un componente es con la propiedad margin
+    esto es para centrarlo*/
+    /* Para agregar un borde a un componente uso la propiedad border */
+    /* Para darle un tamaño a la caja se usa padding */
+    /* Para poner las medidas se sigue una logica top right buttom left 
+        osea arriba, derecha,. abajo e izquierda */
+
+  p{
+    margin: 40px 10px 20px 10px;  /* margin: auto 50px;   */
+    border: 10px solid powderblue;
+    padding: 15px
+  }     
+
+        
+/* Para centrar el texto se usa */
+centrado{
+    text-align: center;
+}
+
+/*Para sacar una paleta de colores con este link
+  https://coolors.co/34f6f2-78e3fd-d1f5ff-eef8ff-7d53de      */
+
+/* Para cambiarle el css a un link tiene 3 partes*/
+    /*La primera es cuando no se ha clickeado */
+    /*Cuando no quiero que aparezca el subrayado es con text-decoration*/
+
+    a:link{
+        color: chartreuse;
+        text-decoration: none;
+    }
+    /*La segunda cuando ya se ha clickeado o visitado*/
+
+    a:visited{
+        color: deeppink;
+    }
+
+    /*La tercera es como el fondo cuando lo vouy a clickear con el hover*/
+
+    a:hover{
+        color: greenyellow;
+        text-decoration: underline;
+    }
+
+    /*El cuarto es cuando esta activo el link osea el momento en el que lo estan 
+    clickeando*/
+
+    a:active{
+        color: darkorchid;
+        text-decoration: underline;
+    }
+
+/*Ahora, para aplicar estilos simultaneamente se separa por coma*/
+
+a:link,a:visited{
+    background-color: #b5179e;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    background-color: #f72585;
+}
+
+
+/*  Para modificiar tablas*/
+
+table, th, td{
+border: 1px solid black;
+border-collapse: collapse;
+padding: 5px;
+}
+
+/*Este es el titulo de una tabla*/ 
+    /*El font family es el tipo de letra*/
+    /*El font size es el tamaño de la letra*/
+    /*Da un espacio del titulo a la tabla y a cada espacio*/
+caption{
+    color: #e63946;
+    font-family: 'Trocchi', serif;
+    font-size: 45px;
+    line-height: 70px;
+}
+
+/*Para modificar los th que son como los titutlos de la tabla*/
+    /*El color es el de la letra*/
+    /*El background color es el fondo*/
+th{
+    color: #f1faee;
+    background-color: #1d3557;
+}
+
+/*para seleccionar los renglones con tr*/
+    /*La propiedad nth-child es para especificar si se desean trabajar los renglos pares
+        o los renglones impares así que even es paren y odd es impar*/
+
+tr:nth-child(even){
+    background-color: #f1faee;
+}
+
+/*Para modificar una lista ordenada*/
+
+ol{
+    list-style: none;
+    counter-reset: contador;
+}
+
+ol li{
+    counter-increment: contador;
+}
+
+/*Con esto le digo que trabaje sobre listas ordenadas pero que antes de cada elemento haga*/
+ol li::before{
+    content: 'Curso' counter(contador);
+
+}
+
+/*Estilos a un div */
+
+div{
+    border: 10px solid #560bad;
+    background-color: #f1faee;
+    text-align: center;
+}
+
+/*Para aplicar estilos especificos si necesito un componente con distintos tipos de css se debe usar
+ .NombreEspecifico entonces esto hace referencia o apunta a lo que necesite y en el html se implementa ese 
+ estilo con class = "NombreEspecifico"  */
+
+.tarjeta{
+    border: 10px solid #560bad;
+    background-color: #f1faee;
+    text-align: center;
+}
+
+/*Lo mejor es definir un padding y un margin global para asignarle respectivamente la propiedad a cada uno
+esto se puede hacer usando una propiedad global que se identifica con el asterisco*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/*Cuandoo no es un elemento reutilizable en distintos componentes se suele usar #TitutloEspecifico
+y se asigna en el componente del id para que este lo use solo el  SOLO SE DEBEN APLICAR A UN ELEMENTO DE HTML*/
+
+#titulo_principal{
+      color: #f72258;
+      text-align: center;
+      margin: 15px;
+}

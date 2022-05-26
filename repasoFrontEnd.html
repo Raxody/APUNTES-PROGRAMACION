@@ -1,0 +1,344 @@
+<!---->
+
+<!--Para generar la estructura basica de HTML uso ! + tab (admiracion mas tab)-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<!--La etiqueta tittle es el titulo de la pagina-->
+
+<title>ESTO ES UN TITULO DE LA PAGINA</title>
+
+<!--Para poner un titulo se una un h1 a h6-->
+style="background-color: powderblue;"
+
+<h1>SOY UN TITULO</h1>
+
+<!--Para poner un parrafo uso p-->
+
+<p>SOY UN PARRAFO</p>
+
+<!--Para hacer un salto de linea uso br-->
+
+<br />
+
+<!--Para hacer un link uso la etiqueta a-->
+
+<a href="https://www.google.com/">googlee</a>
+
+<!--Para que la pestaña se abra en una nueva pagina usamos target-->
+
+<a href="https://www.google.com/" target="_blank">googlee</a>
+
+<!--Para agregar una imagen uso img-->
+<!--Con el src le indico la ruta-->
+<!--El tamaño lo puedo modificar con widht y height-->
+<!--El alt es la descripción auxiliar de la imagen por si no se llega a cargar-->
+<!--Si le agrego el title a una imagen muestra la informacion si se pasa encima-->
+<img
+  src="imagenes/html5.png"
+  alt="logo de html5"
+  width="45px"
+  height="65px"
+  title="loguito"
+/>
+<img src="http://globalmentoring.com.mx/imagenes/css3.png" alt="logo de css" />
+
+<!--Aunque no se me hace optimo y siento que esta mal si necesito que el texto se respete
+    tal cual como lo estoy agregando con lineas a la izquierda, enters y demas uso pre-->
+
+<pre>
+        Parrafo todo
+            FEO QUE se identa raro
+    </pre
+>
+
+<!--Si se quiere meter css o estilo a una propiedad a lo maldita sea se usa
+style-->
+
+<body style="background-color: powderblue"></body>
+
+<!--Para poner en negrilla un texto uso b-->
+
+<p><b>texto en negrilla</b></p>
+
+<!--Para hacer referencia que un texto es importante uso strong-->
+
+<p><strong>texto importante</strong></p>
+
+<!--Para poner un texto en italica (como de lado la letra)-->
+
+<p><i>texto en italica</i></p>
+
+<!--Para agregar un texto pequeño uso small-->
+
+<p><small>texto pequeño</small></p>
+
+<!--Para resaltar algo como si fuese con un marcador uso mark-->
+
+<p><mark>texto resaltado</mark></p>
+
+<!--Para mostrar un texto eliminado o con una linea tachandolo uso del-->
+
+<p><del>texto tachado</del></p>
+
+<!--Para mostrar un texto insertado o subrayado uso ins-->
+
+<p><ins>texto subradado</ins></p>
+
+<!--Para mostrar un subindice uso sub (formulas y cosas así)-->
+
+<p>mostrando un sub en formular H<sub>2</sub>o</p>
+
+<!--Para mostrar un super indice osea que se vea arriba se usa sup-->
+
+<p>mostrando superi<sup>o</sup>r</p>
+
+<!--Para mostrar en tipo codigo uso code-->
+
+<p><code>public static void main()</code></p>
+
+<!--Para caracteres especiales puedo usar los charref normalmente se hace con caracteres
+    especiales que usan los lenguajes de programacion, esto es una referencia de caracter
+    para tildes y demas para que no falle
+     https://dev.w3.org/html5/html-author/charref-->
+
+<p>&LT; simbolo de menor que</p>
+
+<p>&Aacute;rbol</p>
+
+<!--Para agregar una linea horizontal uso el tag de hr-->
+
+<hr />
+
+<!---->
+
+<!--Para enviar un email se usa el href pero con la propiedad mailto 
+esto nos dejara como una estructura prevista para contactarnos-->
+
+<a href="mailto:juancho_lopez6@hotmail.com?subject=probando&body=prueba email">
+  envio el email</a
+>
+
+<!--Para aplicar una hoja de estilos osea el css toca crear el archivo .css
+y despues dentro de la etiqueta head antes de que esta termineuna etiqueta link con el
+rel especificando que es hoja de estilos además de el href con la ruta donde tiene que ir -->
+
+<head>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<!--Para ponerle una imagen a un link que vamos a mandar se pone dentro de una etiqueta a
+una img y listo -->
+
+<a href="https://www.google.com/:" target="_blank">
+  <img src="http://globalmentoring.com.mx/imagenes/css3.png" alt="loguito" />
+</a>
+
+<!--Hay tipos de rutas estan las relativas y las absolutas, por parte de las relativas 
+son las que hacen parte del proyecto y las absolutas son las que nos pueden llevar a otra
+pagina o ya vienen con un dominio -->
+
+<!--Para subir niveles o salir de la carpeta en la que se encuentra para busacar otra 
+se usa o un slash al comienoz y si esto no sirve se usa .. y la ruta-->
+
+<a href="../ADNFINAL/"></a>
+
+<a href="/apuntes/imagenes/css3.png"></a>
+
+<!--Para hacer una tabla se usa table  -->
+<!--Para tomar una mayor cantidad de celdas por titulo es con colspan
+        y si son celdad de datos es con rowspan-->
+<table>
+  <caption>
+    Listado de ejemplo
+  </caption>
+  <tr>
+    <th colspan="2">Nombre</th>
+    <th>Email</th>
+  </tr>
+
+  <tr>
+    <td rowspan="2">Juan</td>
+    <td>juancho@</td>
+  </tr>
+</table>
+
+<table>
+  <caption>
+    Listado de ejemplo
+  </caption>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>Juan</td>
+    <td>Lopez</td>
+    <td>juancho@</td>
+  </tr>
+</table>
+
+<!--Si quiero agregar un tipo de letra que no viene con el css lo busco en internet
+y copio los links que requiera y los pongo antes de cerrar el head-->
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<!--Existen las listas no ordenadas que son ul-->
+<!--Se pueden hacer listas anidadas dentro de un li se pone otra denotacion de lista-->
+<h1>Listas no ordenadas</h1>
+<ul>
+  <li>Juan</li>
+  <li>Andres</li>
+  <li>
+    Lopez
+    <ul>
+      <li>3152546967</li>
+      <li>758494944</li>
+    </ul>
+  </li>
+</ul>
+
+<!--Para hacer listas ordenadas osea con enumeracion de numeros o alfabeticamente se usan listas ol-->
+<!--Para mover el tipo de enumeracion dentro del ol se le agrega el type y se elige-->
+<h1>Listas ordenadas</h1>
+<ol type="A">
+  <li>Juan</li>
+  <li>Andres</li>
+  <li>Lopez</li>
+</ol>
+
+<!--Para utilizar listas de descripcion-->
+
+<h1>Listas de descripcion</h1>
+
+<dl>
+  <dt>Java</dt>
+  <dd>Lenguaje main de programacion mio</dd>
+  <dt>C# con asp.net</dt>
+  <dd>Tambien le meto sabroso pero no tanto</dd>
+  <dt>C o C++</dt>
+  <dd>Mi verdugo de la programacion xd</dd>
+</dl>
+
+<!---->
+<!--Con span se puede modificar pero en linea osea no se crea o se hace un salto de linea feo xd-->
+
+<h1>
+  texto donde voy a cambiar el
+  <span style="color: blue"> color de la letra</span>
+</h1>
+
+<!--Para crear nuevos bloques o divisiones se usa div-->
+
+<div>
+  <h2>titulo del div</h2>
+  <p>texto del div</p>
+</div>
+
+<!--Para implementar un estilo especifico solo a un componente que desde el css se haya marcado con el 
+asterisco se implementa desde el id  SOLO SE DEBEN APLICAR A UN ELEMENTO DE HTML-->
+
+<h1 id="titulo_principal">pruebita</h1>
+
+<!--Para linkear entre componentes de una pagina lo hago por medio del id esto se le
+conoce como un bookmark-->
+
+<h2 id="Java">Acá me llevaria a java</h2>
+
+<a href="#Python">Java</a>
+<a href="#Java">me dirijo a Java</a>
+
+<!--Para cargar lo de otra pagina en mi pagina por ejemplo para distribuir o algo que se tiene 
+que repetir se usa el iframe-->
+
+<!--Por ejemplo si tuviese  codigo en una pagina externa llamada plantila.html
+Y quiero cargar lo que hay allá en otra pagina usaria el iframe que esto es como traer de 
+otro lado pedazos que necesito, paginas, sitios web enteros, videos, informacion etc -->
+
+<iframe src="plantila.html" frameborder="0"></iframe>
+
+<iframe
+  src="https://blog.facialix.com/cupon-udemy-en-espanol-simulador-professional-scrum-with-kanban-psk-exam-2022-con-100-de-descuento-por-tiempo-limitado/"
+  frameborder="0"
+></iframe>
+
+<!--Por ejemplo si quiero que se cargue algo despues de darle una accion es poniendole
+nombre al iframe y a la par a la etiqueta a darle de tarjet el iframe donde se va a cargar-->
+
+<a
+  href="https://blog.facialix.com/cupon-udemy-en-espanol-simulador-professional-scrum-with-kanban-psk-exam-2022-con-100-de-descuento-por-tiempo-limitado/"
+  target="cargarPagina"
+>
+  Cargar pagina con iframe
+</a>
+
+<iframe src="" name="cargarPagina" frameborder="0"></iframe>
+
+<!--Para hacer formularios se tienen que poner los componentes dentro un form-->
+
+<form action="">
+
+</form>
+
+<!--Para realizar formularios en html se usan los input y dependiente de lo que se necesite
+se le cambie el type -->
+<form action="">
+  <input type="text" name="" id="" />
+  <input type="date" name="" id="" />
+</form>
+
+<!--Si quiero que un label y un input se relaciones se hace con for compartiendo por el 
+atributo id-->
+
+<form action="">
+  <label for="nombre">Digita nombre</label>
+  <input type="text" name="" id="nombre" />
+</form>
+
+<!--Si quiero setear un valor en el input lo hago con el atributo value-->
+
+<form action="">
+  <input type="text" name="" id="nombre" value="Valor preestablecido" />
+</form>
+
+
+<!--Si quiero poner un texto atrar para que entiendan que valor debe ir uso el placeholder-->
+
+<form action="">
+  <input type="text" name="" id="nombre" placeholder="Aca deberian digitar el nombre" />
+</form>
+
+
+<!--Si quiero que el valor sea obligatorio al momento de enviarse uso el required=true-->
+
+<form action="">
+  <input type="text" name="" id="nombre" required = true/>
+  <input type="submit" value="enviar">
+</form>
+
+
+<!--Si el formulario no es tan importante de llenar se puede usar el novaldiate-->
+
+<form novalidate>
+  <input type="text" name="" id="nombre" required = true/>
+  <input type="submit" value="enviar">
+</form>
+
+
