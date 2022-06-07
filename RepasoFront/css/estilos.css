@@ -1,14 +1,20 @@
+.rojo{
+    border: 10px solid;
+    border-width: 10px 5px 3px 7px;
+    border-color: #1d3557 aliceblue hsl(333, 77%, 53%) rgba(57, 17, 8, 0.404);
+    border-radius: 20px;
+}
 
-        /*Estilos a un div */
+.rosa{
+        border: 10px dashed rgb(255, 105, 180);
+        border-radius: 100px 0px 100px 0px;
         
-        .tarjeta{
-            border: 10px solid #560bad;
-            background-color: #f1faee;
-            text-align: center;
-        }
+    }   
 
-        #titulo_principal{
-            color: #f72258;
-            text-align: center;
-            margin: 15px;
-      }
+.amarillo{
+    border: 10px double #ffd700;
+}
+
+.azul{
+    border: 10px dotted hsl(174,72%,56%);
+}

@@ -293,15 +293,14 @@ nombre al iframe y a la par a la etiqueta a darle de tarjet el iframe donde se v
 
 <!--Para hacer formularios se tienen que poner los componentes dentro un form-->
 
-<form action="">
-
-</form>
+<form action=""></form>
 
 <!--Para realizar formularios en html se usan los input y dependiente de lo que se necesite
 se le cambie el type -->
 <form action="">
   <input type="text" name="" id="" />
   <input type="date" name="" id="" />
+  <input type="number" name="" id="" step="any" />
 </form>
 
 <!--Si quiero que un label y un input se relaciones se hace con for compartiendo por el 
@@ -318,27 +317,148 @@ atributo id-->
   <input type="text" name="" id="nombre" value="Valor preestablecido" />
 </form>
 
-
 <!--Si quiero poner un texto atrar para que entiendan que valor debe ir uso el placeholder-->
 
 <form action="">
-  <input type="text" name="" id="nombre" placeholder="Aca deberian digitar el nombre" />
+  <input
+    type="text"
+    name=""
+    id="nombre"
+    placeholder="Aca deberian digitar el nombre"
+  />
 </form>
-
 
 <!--Si quiero que el valor sea obligatorio al momento de enviarse uso el required=true-->
 
 <form action="">
-  <input type="text" name="" id="nombre" required = true/>
-  <input type="submit" value="enviar">
+  <input type="text" name="" id="nombre" required="true" />
+  <input type="submit" value="enviar" />
 </form>
-
 
 <!--Si el formulario no es tan importante de llenar se puede usar el novaldiate-->
 
 <form novalidate>
-  <input type="text" name="" id="nombre" required = true/>
-  <input type="submit" value="enviar">
+  <input type="text" name="" id="nombre" required="true" />
+  <input type="submit" value="enviar" />
 </form>
 
+<!--Para poner radioButton y además si quiero que hayan bastantes opciones pero solo quiero que se pueda
+seleccionar de a 1 en el atributo name le pongo el mismo identificador-->
 
+<input type="radio" value="femenino" name="genero" id="femenino" />
+<label for="femenino">femenino</label>
+
+<input type="radio" value="masculino" name="genero" id="masculino" />
+<label for="femenino">femenino</label>
+
+<!--Para poner un checkbox y además si quiero que hayan bastantes opciones pero solo quiero que se pueda
+seleccionar de a 1 en el atributo name le pongo el mismo identificador-->
+
+<label for="">los checkbox</label><br />
+<input type="checkbox" name="msuica" id="regueton" value="regueton" />
+<label for="">regueton</label><br />
+<input type="checkbox" name="msuica" id="salsa" value="salsa" />
+<label for="">salsa</label><br />
+
+<!--Si quiero hacer una lista desplegable uso el select y le mando dentro de cada uno
+con un option la opcion que deseo ademas con el atributo selectes hago que por default
+este se seleccione-->
+
+<label for="autos">Marca de auto favorita</label>
+<select name="autos" id="autos">
+  <option value="seleccionaOpc" selected="true">Selecciona el auto</option>
+  <option value="volvo">Volvo</option>
+  <option value="bmw">Bmw</option>
+  <option value="chevrolet">Chevrolet</option>
+</select>
+<br />
+
+<!--Para usar un textArea se usa esas etiqueta y se le dan las propiedades del tamaño-->
+
+<label for="texto">Ingresa texto</label>
+<textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+
+<!--Si quiero darle un marco al formulario es con fieldset y si quiero darle un titulo a 
+ese marco es con legend-->
+
+<form action="">
+  <fieldset>
+    <legend>TITULO CHIMBA</legend>
+    <label for="texto">Ingresa texto</label>
+    <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+  </fieldset>
+</form>
+
+<!--Para enviar se hace con post y no se adjunta al URL y con target self se carga sobre la 
+misma ventana y o abre otra y con el autocomplete es pa que los datos no se guarden en 
+memoria sino se borren-->
+
+<form action="mi_servidor" method="POST" target="_self" autocomplete="off">
+  <label for="texto">Ingresa texto</label>
+  <input type="text" name="text" id="texto" />
+</form>
+
+<!--Para borrar los elementos de un formulario con el boton tipo reset-->
+
+<form action="mi_servidor" autocomplete="off">
+  <label for="texto">Ingresa texto</label>
+  <input type="text" name="text" id="texto" />
+
+  <input type="reset" value="restablecer" />
+</form>
+
+<!--Si quiero que solo se pueda leer un campo y este no se pueda moficiar uso 
+readonly y disabled-->
+
+<input
+  type="text"
+  name="leer"
+  id="solover"
+  value="solo me ves "
+  readonly="true"
+  disabled="true"
+/>
+
+<!--Las etiquetas semanticas en HTML5 y la  correcta semantica o forma de tratar la
+   pagina es así-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Etiquetas semánticas en HTML5</h1>
+    </header>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+
+    </nav>
+  </body>
+</html>
+
+
+<!-- Si quiero ponerle más de un css a un elemento puedo meterle dos diferentes clases
+separandolo por un espacio-->
+
+ <p class ="centrado titulo_principal"></p>
+
+ <!--Pagina de colores chimbas-->
+
+ https://htmlcolorcodes.com/
+
+ 

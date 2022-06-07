@@ -1,8 +1,9 @@
 /*Un estilo aplicado a nivel de un elemento html sobreescribe un elemento definido de un
 archivo*/
 
-/*El orden de propiedades desde capa externa a interna es margin, border, padding-->
+/*El orden de propiedades desde capa externa a interna es outline.margin, border, padding-->
 
+    /*Para agregar un fuera de linea osea algo muyy externo uso el outline*/
     /* Para agregar un margen a un componente es con la propiedad margin
     esto es para centrarlo*/
     /* Para agregar un borde a un componente uso la propiedad border */
@@ -11,14 +12,26 @@ archivo*/
         osea arriba, derecha,. abajo e izquierda */
 
   p{
+    outline: 10px solid #b5179e;
     margin: 40px 10px 20px 10px;  /* margin: auto 50px;   */
     border: 10px solid powderblue;
     padding: 15px
   }     
+  /*Esto es para que se adecue a toda la pantalla*/
+  div{
+      max-width: 100%;
+      max-height: 100%;
+  }
 
+/*Para centrar un componente por ejemplo centrar un div uso el auto*/
+
+div{
+    max-width: auto;
+
+}  
         
 /* Para centrar el texto se usa */
-centrado{
+.centrado{
     text-align: center;
 }
 
@@ -123,11 +136,6 @@ ol li::before{
 
 /*Estilos a un div */
 
-div{
-    border: 10px solid #560bad;
-    background-color: #f1faee;
-    text-align: center;
-}
 
 /*Para aplicar estilos especificos si necesito un componente con distintos tipos de css se debe usar
  .NombreEspecifico entonces esto hace referencia o apunta a lo que necesite y en el html se implementa ese 
@@ -142,7 +150,7 @@ div{
 /*Lo mejor es definir un padding y un margin global para asignarle respectivamente la propiedad a cada uno
 esto se puede hacer usando una propiedad global que se identifica con el asterisco*/
 
-*{
+*{ 
     margin: 0%;
     padding: 0%;
 }
@@ -155,3 +163,154 @@ y se asigna en el componente del id para que este lo use solo el  SOLO SE DEBEN 
       text-align: center;
       margin: 15px;
 }
+
+/*Esto es un selector y dice que a un componente le puedo asignar sobre cual es y adicional 
+una instruccion especifica pero en este caso solo funcionaria si es un elemento de tipo p*/
+
+p.centrar{
+    text-align: center;
+}
+
+/*Otro tipo de selector es cuando le queremos a ciertas clases agregar un atributo compartido*/ 
+
+.rojo{
+    background-color: firebrick;
+}
+
+.rosa{
+    background-color: hwb(330 41% 0%);
+}
+
+.rojo, .rosa{
+    color: white;
+}
+
+/*Para poner bordes distintos se pueden aplicar estas propiedades*/ 
+    /*Para cambiarle los tamaños a los bordes se usa la propiedar border-with*/
+    /*Para cambiarle los colores a los bordes se usa la propiedar border-color*/
+    /*Para volver un borde redondo se usa la propiedad border-radius*/
+.solido{
+    border: 10px solid;
+    border-width: 10px 5px 3px 7px;
+    border-color: #1d3557 aliceblue hsl(333, 77%, 53%) rgba(57, 17, 8, 0.404);
+    border-radius: 100px;
+}
+
+.discontinuo{
+    border: 10px dashed rgb(255, 105, 180);
+    border-radius: 100px 0px 100px 0px;
+    
+}   
+
+.doble{
+    border: 10px double #ffd700;
+}
+
+.punteado{
+    border: 10px dotted hsl(174,72%,56%);
+}
+
+.surco{
+    border: 10px groove;
+}
+
+.cresta{
+    border: 10px ridge;
+}
+
+.recuadro{
+    border: 10px inset;
+}
+
+.outset{
+    border: 10px outset;
+}
+
+.sinBorde{
+    border: 10px none;
+}
+
+.oculto{
+    border: 10px hidden;
+}
+
+
+.mixto{
+    /*Cada uno es un lado distinto */
+    border-style: dotted solid dashed double;
+}
+
+/*Si quiero trabajar colores por rgb y pongo alguno con 0 es ausencia total y 255 que es lo 
+maximo significa que es la presencia total*/
+
+.rgb{
+    color: rgb(255, 0, 0); /*Estos son los rojos*/
+    color: rgb(0, 255, 0); /*Estos son los verdes*/
+    color: rgb(0, 0, 255); /*Estos son los azules*/
+}
+
+/*Si quiero trabajar con colores con transparencia si pongo 1 no tengo transparecia,
+0 la mayor transparecia y .5 el 50% .7 el 70% y asi*/
+
+.rgba{
+    color: rgba(255, 0, 0,0); /*Estos son los rojos*/
+    color: rgba(0, 255, 0,1); /*Estos son los verdes*/
+    color: rgba(0, 0, 255,.5); /*Estos son los azules*/    
+}
+
+/*Si quiero trabajar colores por hexadecimal y pongo alguno con el rango hexa hasta ff es el
+ maximo y 00 es ausencia del mismo */
+
+.hexadecimal{
+    background-color: #aa0000;
+    background-color: #00ff00;
+    background-color: #0000FF;
+    /*Si quiero aplicar con transparencia es con el ultimo par*/
+    background-color: #aaeeFF88;
+}
+
+/*Si quiero trabajar colores por hsl pongo los 3 argumentos que recibe 
+(hue, saturation, lightness) */
+
+.hsl{
+    background-color: hsl(174,72%,56%);
+    /*Si quiero aplicar con transparencia es con el porcentaje que se desee*/
+    background-color: hsl(174,72%,56%,.5);
+}
+
+ /*Para cambiar los fondos se le pone al body*/
+
+ body{
+     background-color: #ffd700;
+     background-image: url("imagenes/fondo.png");
+     /*Si quiero que la imagen se repita o no se hace con la propiedad repeat*/
+     background-repeat: no-repeat;
+     /*Si quiero que la foto de fondo se quede quieta uso el osea que donde se haga scroll 
+     lo siga */
+     background-attachment: fixed;
+     /*Si quiero que la foto de fondo se mueva con el scroll osea que sea como dinamica se 
+     usa el scroll */
+     background-attachment: scroll;    
+ }  
+
+/*Para cambiarle propiedades a las letras de los titulos estas*/
+
+ h1{
+     color: #560bad;
+     background-color: #00ff00;
+     text-align: center;
+     /*Dejar el texto en matusculas*/
+     text-transform: uppercase;
+    /*Para dejar espacios entre las letras*/
+    letter-spacing: 3px;
+    /*para dejar espacios entre palabras*/
+    word-spacing: 3px;
+ }
+p{
+    /*Para identar el texto*/
+    text-indent: 30px;
+}
+
+  
+
+ 
